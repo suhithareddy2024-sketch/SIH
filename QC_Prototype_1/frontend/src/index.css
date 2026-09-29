@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #070A0F;
+    --surface-primary: #0D1117;
+    --surface-secondary: #121820;
+    --surface-elevated: #171E27;
+    --border-subtle: #1B242E;
+    --border-default: #252E38;
+    --border-strong: #384454;
+    
+    --text-primary: #F5F7FA;
+    --text-secondary: #A3ACB9;
+    --text-muted: #697586;
+    
+    /* Semantic Accents */
+    --accent-quantum: #22D3EE;
+    --accent-threat: #F43F5E;
+    --accent-warning: #F59E0B;
+    --accent-secure: #10B981;
+    --accent-education: #A78BFA;
+    --accent-analytics: #34D399;
+  }
+
+  body {
+    background-color: #070A0F;
+    color: #F5F7FA;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography utilities */
+.font-mono-data {
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B242E;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #252E38;
+}
+
+/* Global Card System (3 Tiers) */
+/* Tier 1: Surface (Minimal / Clean) */
+.ui-surface {
+  background: #0D1117;
+  border-radius: 0.5rem;
+}
+
+/* Tier 2: Panel (Standard Section with subtle border) */
+.ui-panel {
+  background: #0D1117;
+  border: 1px solid #1B242E;
+  border-radius: 0.625rem;
+}
+
+.ui-panel-secondary {
+  background: #121820;
+  border: 1px solid #1B242E;
+  border-radius: 0.5rem;
+}
+
+.ui-panel-elevated {
+  background: #171E27;
+  border: 1px solid #252E38;
+  border-radius: 0.5rem;
+}
+
+/* Tier 3: Active State Semantic Accents (Subtle, purposeful) */
+.ui-active-cyan {
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.ui-active-crimson {
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+.ui-active-amber {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.ui-active-emerald {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.ui-active-violet {
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+/* Compatibility helper */
+.cyber-panel {
+  background: #0D1117;
+  border: 1px solid #1B242E;
+  border-radius: 0.625rem;
+}
+
+@keyframes quantumBeam {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(450%);
+    opacity: 0;
+  }
+}
+
+.animate-quantum-beam {
+  animation: quantumBeam 2.2s linear infinite;
+}
+
+.animate-quantum-beam-fast {
+  animation: quantumBeam 0.7s linear infinite;
+}
